@@ -10,17 +10,17 @@ const Footer = () => {
           
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">👟 KidsShoes</h3>
-            <p className="text-sm opacity-90 mb-4">
-              A loja online de calçados infantis mais confiável do Brasil. 
-              Qualidade, conforto e estilo para os pequenos.
+            <h3 className="text-2xl font-semibold mb-4">TipToe & Joey</h3>
+            <p className="text-sm opacity-90 mb-4 font-light">
+              Acompanhando cada passo da jornada dos pequenos. Do nascimento às grandes aventuras, 
+              oferecemos calçados premium pensados para cada fase do desenvolvimento infantil.
             </p>
             <div className="flex gap-4">
               <Button size="sm" variant="secondary" className="rounded-full">
-                📘 Facebook
+                Instagram
               </Button>
               <Button size="sm" variant="secondary" className="rounded-full">
-                📷 Instagram
+                Facebook
               </Button>
             </div>
           </div>
@@ -29,11 +29,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Links Rápidos</h4>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><a href="#" className="hover:text-accent transition-colors">🏠 Página Inicial</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">👟 Todos os Produtos</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">🔥 Ofertas</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">📏 Guia de Tamanhos</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">📞 Contato</a></li>
+              <li><a href="https://br.tiptoeyjoey.com/" className="hover:text-accent transition-colors">Página Inicial</a></li>
+              <li><a href="https://br.tiptoeyjoey.com/390?map=productClusterIds" className="hover:text-accent transition-colors">Lançamentos</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Black Friday</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Guia de Tamanhos</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Sobre Nós</a></li>
             </ul>
           </div>
 
@@ -41,11 +41,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Categorias</h4>
             <ul className="space-y-2 text-sm opacity-90">
-              <li><a href="#" className="hover:text-accent transition-colors">⚽ Tênis Esportivos</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">👔 Sapatos Sociais</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">🏖️ Sandálias</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">🥾 Botas</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">🏠 Chinelos</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Nascer e Crescer</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Andar e Equilibrar</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Correr e Brincar</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Primeira Caminhada</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Calçados Barefoot</a></li>
             </ul>
           </div>
 
@@ -107,7 +107,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-6 flex flex-col md:flex-row justify-between items-center text-sm opacity-90">
-          <p>© 2024 KidsShoes. Todos os direitos reservados.</p>
+          <p>© 2024 TipToe & Joey. Todos os direitos reservados.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-accent transition-colors">Política de Privacidade</a>
             <a href="#" className="hover:text-accent transition-colors">Termos de Uso</a>

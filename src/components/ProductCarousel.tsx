@@ -2,62 +2,66 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import sneakersImage from "@/assets/sneakers-kids.jpg";
-import dressShoesImage from "@/assets/dress-shoes-kids.jpg";
+import sneakersImage from "@/assets/running-shoes.jpg";
+import dressShoesImage from "@/assets/baby-shoes.jpg";
 import sandalsImage from "@/assets/sandals-kids.jpg";
 
 const products = [
   {
     id: 1,
-    name: "Tênis Infantil Sport",
-    brand: "KidsRun",
-    originalPrice: 189.90,
-    salePrice: 56.97,
+    name: "First Steps Canvas",
+    brand: "TipToe & Joey",
+    originalPrice: 265.00,
+    salePrice: 79.50,
     discount: 70,
-    image: sneakersImage,
-    rating: 4.8,
-    reviews: 156,
-    colors: ["Azul", "Rosa", "Verde"],
-    sizes: ["25", "26", "27", "28", "29", "30"]
+    image: dressShoesImage,
+    rating: 4.9,
+    reviews: 234,
+    colors: ["Natural", "Dusty Rose", "Sage"],
+    sizes: ["17", "18", "19", "20", "21", "22"],
+    category: "Nascer e Crescer"
   },
   {
     id: 2,
-    name: "Sapato Social Infantil",
-    brand: "LittleGent",
-    originalPrice: 159.90,
-    salePrice: 79.95,
+    name: "Adventure Runner",
+    brand: "TipToe & Joey", 
+    originalPrice: 289.00,
+    salePrice: 144.50,
     discount: 50,
-    image: dressShoesImage,
-    rating: 4.6,
-    reviews: 89,
-    colors: ["Preto", "Marrom"],
-    sizes: ["24", "25", "26", "27", "28"]
+    image: sneakersImage,
+    rating: 4.8,
+    reviews: 189,
+    colors: ["Earth Green", "Warm Taupe"],
+    sizes: ["23", "24", "25", "26", "27", "28"],
+    category: "Andar e Equilibrar"
   },
   {
     id: 3,
-    name: "Sandália Verão Kids",
-    brand: "SummerFeet",
-    originalPrice: 129.90,
-    salePrice: 38.97,
+    name: "Summer Explorer",
+    brand: "TipToe & Joey",
+    originalPrice: 189.00,
+    salePrice: 56.70,
     discount: 70,
     image: sandalsImage,
     rating: 4.9,
-    reviews: 203,
-    colors: ["Rosa", "Azul", "Amarelo"],
-    sizes: ["20", "21", "22", "23", "24", "25"]
+    reviews: 156,
+    colors: ["Cream", "Blush", "Sand"],
+    sizes: ["20", "21", "22", "23", "24", "25"],
+    category: "Correr e Brincar"
   },
   {
     id: 4,
-    name: "Bota Infantil Adventure",
-    brand: "KidsTrail",
-    originalPrice: 219.90,
-    salePrice: 109.95,
+    name: "Barefoot Comfort",
+    brand: "TipToe & Joey",
+    originalPrice: 245.00,
+    salePrice: 122.50,
     discount: 50,
     image: dressShoesImage,
     rating: 4.7,
-    reviews: 124,
-    colors: ["Marrom", "Preto"],
-    sizes: ["26", "27", "28", "29", "30", "31"]
+    reviews: 203,
+    colors: ["Soft Brown", "Powder Pink"],
+    sizes: ["17", "18", "19", "20", "21", "22"],
+    category: "Nascer e Crescer"
   }
 ];
 
@@ -77,11 +81,12 @@ const ProductCarousel = () => {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-black text-primary mb-4">
-            🔥 MAIS VENDIDOS
+          <h2 className="text-4xl lg:text-5xl font-light text-primary mb-4">
+            Favoritos das Famílias
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Os calçados infantis preferidos dos pais, agora com desconto imperdível na Black Friday
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
+            Descubra os calçados mais amados pelos pequenos e suas famílias, 
+            agora com preços especiais da Black Friday
           </p>
         </div>
 
@@ -105,24 +110,22 @@ const ProductCarousel = () => {
                       />
                       
                       {/* Discount Badge */}
-                      <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full font-bold text-sm animate-pulse">
+                      <div className="absolute top-4 left-4 bg-accent text-accent-foreground px-3 py-1 rounded-full font-semibold text-sm">
                         -{product.discount}%
                       </div>
                       
-                      {/* Quick Actions */}
-                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Button size="sm" variant="secondary" className="rounded-full">
-                          ❤️
-                        </Button>
+                      {/* Category Badge */}
+                      <div className="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
+                        {product.category}
                       </div>
                     </div>
 
                     {/* Product Info */}
                     <div className="p-6">
-                      <div className="text-sm text-muted-foreground font-semibold mb-1">
+                      <div className="text-sm text-muted-foreground font-medium mb-1">
                         {product.brand}
                       </div>
-                      <h3 className="font-bold text-lg text-card-foreground mb-2">
+                      <h3 className="font-semibold text-lg text-card-foreground mb-2">
                         {product.name}
                       </h3>
                       
@@ -144,7 +147,7 @@ const ProductCarousel = () => {
                       {/* Price */}
                       <div className="mb-4">
                         <div className="flex items-center gap-2">
-                          <span className="text-2xl font-black text-secondary">
+                          <span className="text-2xl font-bold text-accent">
                             R$ {product.salePrice.toFixed(2).replace('.', ',')}
                           </span>
                           <span className="text-sm text-muted-foreground line-through">
@@ -169,8 +172,8 @@ const ProductCarousel = () => {
                       </div>
 
                       {/* CTA Button */}
-                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold">
-                        🛒 COMPRAR AGORA
+                      <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold">
+                        Adicionar ao Carrinho
                       </Button>
                     </div>
                   </Card>

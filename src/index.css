@@ -8,44 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: 0 0% 98%;
+    --foreground: 20 14% 19%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 20 14% 19%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 20 14% 19%;
 
-    /* Black Friday Theme Colors */
-    --primary: 0 0% 9%;
+    /* TipToe Joey Theme Colors */
+    --primary: 20 14% 19%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 345 83% 47%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 346 29% 76%;
+    --secondary-foreground: 20 14% 19%;
 
-    --accent: 43 74% 49%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 27 82% 58%;
+    --accent-foreground: 0 0% 98%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 20 14% 19%;
 
-    /* Black Friday Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(345 83% 30%));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(0 100% 67%));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(43 74% 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 9%) 0%, hsl(345 83% 30%) 50%, hsl(0 100% 50%) 100%);
+    /* TipToe Joey Gradients - Soft and Natural */
+    --gradient-primary: linear-gradient(135deg, hsl(20 14% 19%), hsl(25 5.3% 44.7%));
+    --gradient-secondary: linear-gradient(135deg, hsl(346 29% 76%), hsl(346 29% 85%));
+    --gradient-accent: linear-gradient(135deg, hsl(27 82% 58%), hsl(27 82% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(346 29% 76%) 0%, hsl(27 82% 85%) 50%, hsl(60 4.8% 95.9%) 100%);
 
-    /* Shadows */
-    --shadow-glow: 0 0 30px hsl(var(--secondary) / 0.5);
-    --shadow-soft: 0 10px 40px hsl(0 0% 0% / 0.1);
+    /* Shadows - Subtle and Elegant */
+    --shadow-glow: 0 0 25px hsl(346 29% 76% / 0.3);
+    --shadow-soft: 0 8px 32px hsl(20 14% 19% / 0.08);
 
     --radius: 0.75rem;
 
@@ -114,31 +114,40 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans;
   }
 
-  /* Custom animations for Black Friday */
+  /* Custom animations for TipToe Joey */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px hsl(var(--secondary) / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(var(--secondary) / 0.6); }
+    0%, 100% { box-shadow: 0 0 15px hsl(346 29% 76% / 0.2); }
+    50% { box-shadow: 0 0 25px hsl(346 29% 76% / 0.4); }
   }
 
   @keyframes bounce-subtle {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
+    50% { transform: translateY(-3px); }
   }
 
-  @keyframes flash {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0.7; }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
   }
 
   .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-glow 3s ease-in-out infinite;
   }
 
   .animate-bounce-subtle {
     animation: bounce-subtle 2s ease-in-out infinite;
   }
 
-  .animate-flash {
-    animation: flash 1.5s ease-in-out infinite;
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 }
